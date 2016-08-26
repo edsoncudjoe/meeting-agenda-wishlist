@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+        <div class="main" id="header-top">
+            <header class="wrapper clearfix">
+                <nav>
+                    <div class="navbar navbar-inverse">
+                    <a href="{{ url_for('index') }}"><h1
+                        class="brand-logo">Technical Meeting Agenda Points</h1></a>
+                    </ul>
+
+                    </div>
+                </nav>
+            </header>
+        </div>
+
+{% block content %}{% endblock %}
+
+
+<!--<script>
+        //function showMsg() {
+        var collected_msg = [];
+        var msg = document.getElementById('message');
+        var res = document.getElementById('result');
+        var btn = document.getElementsByTagName('button');
+
+        btn.cli
+        collected_msg.push(msg.textContent);
+        console.log(collected_msg);
+
+            //for (var i=0; i<collected_msg.length; i++) {
+            //    res[0].innerHTML = collected_msg[i];
+            //}
+        //}
+    </script>-->
+</body>
+</html>

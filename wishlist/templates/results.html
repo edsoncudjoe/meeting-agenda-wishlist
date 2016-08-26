@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Topics for meeting
+{% endblock %}
+
+{% block content %}
+    <section>
+    <!--Place results box list here-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 results" id="result">
+                    <!--Possible class inside here-->
+                    <h3>Messages</h3>
+                    {% for c in col %}
+                        <ul>
+                            <li>{{ c.text }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
